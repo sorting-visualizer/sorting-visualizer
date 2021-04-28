@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+.displayGraph{
+    height:95vh;
+    width:70vw;
+    background-color:#1F2833;
+    margin: auto;
+}
+.bar{
+    display: inline-block;
+    background-color: white;
+    vertical-align:top;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.sideBar{
+    display: flex;
+    height:95vh;
+    width:30vw;
+    background-color:#cca580;
+    margin:auto;
+    padding: 2%;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sideItem{
+    margin: 0%;
+    margin-top: 10%;
+    margin-left: 4.5vw;
+    padding: auto;
+    align-self: auto;
 }
-
-.App-link {
-  color: #61dafb;
+.sideItemHeading{
+    font-size:40px;
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    text-align: center;
+    margin-left: 4.5vw;
 }
+.sideItemLabel{
+    margin: 0%;
+    margin-top: 10%;
+    margin-left: 4.5vw;
+    /* font-size:10px; */
+    padding: auto;
+    font-size-adjust: inherit;
+    font-family:"Lucida Console";
+    font-size: large;
+    text-align: center;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.row{
+    display: flex;
+    background-color:#1F2833 ;
+}
+root{
+    display: flex;
+    background-color:#1F2833 ;
 }
