@@ -3,9 +3,12 @@ import generate from '../gen/gen_arr'
 import Button from '@material-ui/core/Button';
 import genCols from '../gen/gen_cols';
 import BubbleSort from '../algo/bubble';
+import RadioButtonsGroup from './radio';
+// import mergeSort from '../algo/mergesort';
 
-export default function Sidebar({ size, arr, setSize, setArr, setColor }) {
+export default function Sidebar({ size, arr, setSize, setArr, setColor,algo,setAlgo}) {
     const ref = React.createRef();
+
     return (
         <div className="sideBar">
             <center>
@@ -20,7 +23,7 @@ export default function Sidebar({ size, arr, setSize, setArr, setColor }) {
                     <label>Size</label>
                 </div>
                 <div class="sideItem">
-                    <input type="range" ref={ref} min="1" max="100" class="slider" id="myRange" label="Array Size"></input>
+                    <input type="range" ref={ref} min="10" max="100" class="slider" id="myRange" label="Array Size"></input>
                 </div>
 
 
@@ -35,22 +38,15 @@ export default function Sidebar({ size, arr, setSize, setArr, setColor }) {
                     <label>Algorithm</label>
                 </div>
                 <div class="sideItem">
-                    <label>
-                        <input label="Algorithm" list="Algorithms" name="algo" />
-                    </label>
-                    <datalist id="Algorithms">
-                        <option value="Bubble Sort" />
-                        <option value="Insertion Sort" />
-                        <option value="Selection Sort" />
-                        <option value="Merge Sort" />
-                        <option value="Quick Sort" />
-                    </datalist></div>
+                        <RadioButtonsGroup algo={algo} setAlgo={setAlgo}/>
+                </div>
 
 
-                <div class="sideItem">
-                    <Button variant="contained" color="secondary" onClick={() => {
-                        BubbleSort(arr, setArr);
-                    }}> Sort</Button></div>
+                    <div class="sideItem">
+                        <Button variant="contained" color="secondary" onClick={() => {
+                            BubbleSort(arr, setArr);
+                            // mergeSort(arr, setArr);
+                        }}> Sort</Button></div>
             </center>
         </div>
     )
